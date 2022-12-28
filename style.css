@@ -1,0 +1,31 @@
+pre {
+    font-family: Cascadia Code;
+    background: #292c34;
+    color: #a4aab6;
+    font-weight: bold;
+    font-size: large;
+    width: 700px;
+    height: 600px;
+}
+.ligth-blue-symbols{
+    color: #6195a3;
+}
+.pink{
+    color: #b677d1;
+}
+.yellow{
+    color: #c7a25d;
+}
+.green-text{
+    color: #7ba86f;
+}
+.grey-comment{
+    color: #80848c;
+    font-style: oblique;
+}
+.blue{
+    color: #629fed;
+}
+.red{
+    color: #b9615c;
+}

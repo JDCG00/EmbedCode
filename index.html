@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/code.png" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed Code</title>
+  </head>
+  <body>
+    <pre>
+      <code>
+        <span class="yellow">const</span> <span class="pink">nombreCache</span><span class="ligth-blue-symbols"> = </span><span class="green-text">'NasaImagesv2'</span>;
+        <span class="grey-comment">//Cachear archivos</span>
+        <span class="yellow">const</span> <span class="pink">archivos</span><span class="ligth-blue-symbols"> = </span>[
+            <span class="green-text">  'index.html',
+              'css/buttonEffect.css',
+              'css/style.css',
+              'js/app.js',
+              'js/nasaImages.js',
+              'js/starsEffect.js',
+              'error.html'</span>
+        ];
+        <span class="grey-comment">//Una vez instalado el serviceWorker..
+        //Sólo se ejecuta una vez
+        </span>
+        <span class="yellow">self</span>.<span class="blue">addEventListener</span>(<span class="green-text">'install'</span>, (<span class="red">e</span>)<span class="pink"> =></span> {
+            <span class="yellow">console</span>.<span class="blue">log</span>(<span class="green-text">'Instalado el Service Worker'</span>);
+            <span class="grey-comment">//Esperar hasta que se descarguen todos los archivos de cache</span>
+            <span class="red">e</span>.<span class="blue">waitUntil</span>(
+                <span class="yellow">caches</span>.<span class="blue">open</span>(<span class="yellow">nombreCache</span>)
+                    .<span class="blue">then</span>(<span class="red">cache</span><span class="pink"> =></span> {
+                        <span class="red">cache</span>.<span class="blue">addAll</span>(<span class="yellow">archivos</span>);
+                    })
+            )
+        });
+      </code>
+    </pre>
+  </body>
+</html>
